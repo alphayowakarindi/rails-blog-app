@@ -1,1 +1,26 @@
-<h1>Here is a list of one user fetched by their id</h1>
+<section id="users">
+  <div class="user">
+    <div class="avatar">
+      avatar
+    </div>
+    <div class="info">
+      <h2><%= @user.name %></h2>
+      <span>Number of posts: <%= @user.posts_counter %> </span>
+    </div>
+  </div>
+</section>
+<section id="bio">
+  <h4>Bio</h4>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam itaque aliquam hic ratione quod pariatur incidunt officia! Quis veniam quaerat voluptate quas consectetur dolorum unde incidunt repellendus voluptatibus rerum modi, inventore vero ipsam porro omnis molestiae laboriosam, tempora neque laborum.
+  </p>
+</section>
+<section id="recent-posts">
+  <div class="post">
+    <h4>Post #1</h4>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing.
+    </p>
+  </div>
+  <button class="btn see-posts">See all posts</button>
+</section>
