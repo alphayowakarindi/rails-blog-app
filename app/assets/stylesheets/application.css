@@ -13,3 +13,48 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* users section */
+#users {
+  padding: 25px 30px;
+}
+
+#users .avatar {
+  border: 1px solid #000;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#users .user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#users .info {
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 600px;
+  padding: 15px;
+}
+
+#users .info h2 {
+  font-size: 32px;
+}
+
+#users .info span {
+  position: relative;
+  top: 10px;
+}
