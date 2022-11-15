@@ -12,15 +12,17 @@
 <section id="bio">
   <h4>Bio</h4>
   <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam itaque aliquam hic ratione quod pariatur incidunt officia! Quis veniam quaerat voluptate quas consectetur dolorum unde incidunt repellendus voluptatibus rerum modi, inventore vero ipsam porro omnis molestiae laboriosam, tempora neque laborum.
+    <%= @user.bio %>
   </p>
 </section>
 <section id="recent-posts">
-  <div class="post">
-    <h4>Post #1</h4>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing.
-    </p>
-  </div>
+  <% @recent_posts.each_with_index do |post, index| %>
+    <div class="post">
+      <h4>Post #<%= index + 1 %></h4>
+      <p>
+        <%= post.title %>
+      </p>
+    </div>
+  <% end %>
   <button class="btn see-posts">See all posts</button>
 </section>
