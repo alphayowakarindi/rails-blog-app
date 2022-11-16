@@ -18,9 +18,9 @@
 <section id="recent-posts">
   <% @recent_posts.each_with_index do |post, index| %>
     <div class="post">
-      <h4>Post #<%= index + 1 %></h4>
+      <h4><%= link_to "Post #{index+1}", user_post_path(@user, post)%></h4>
       <p>
-        <%= post.title %>
+        <%= link_to post.title, user_post_path(@user, post) %>
       </p>
     </div>
   <% end %>
