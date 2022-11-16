@@ -3,5 +3,5 @@
   <p>
     <%= link_to post.title, user_post_path(@user, post) %>
   </p>
-  <span class="reaction-count">Comments: x, Likes: y</span>
+  <span class="reaction-count">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></span>
 </div>
