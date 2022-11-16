@@ -100,6 +100,10 @@ a {
   cursor: pointer;
 }
 
+#recent-posts .text {
+  margin-left: 4px;
+}
+
 /* comments */
 .comments {
   border: 3px solid #000;
@@ -113,11 +117,11 @@ a {
   margin-top: 3px;
 }
 
-.comment h4 {
+#post .comment h4 {
   margin: 0;
 }
 
-.comment span {
+#post .comment span {
   margin-left: 4px;
 }
 
