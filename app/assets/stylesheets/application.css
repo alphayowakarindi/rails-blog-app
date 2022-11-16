@@ -57,6 +57,12 @@ body {
 
 #users .info h2 {
   font-size: 32px;
+  cursor: pointer;
+}
+
+#users .info a {
+  text-decoration: none;
+  color: #000;
 }
 
 #users .info span {
