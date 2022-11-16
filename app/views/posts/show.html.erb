@@ -8,14 +8,5 @@
       <%= @post_text%>
     </p>
   </div>
-  <% if @comments.length.positive? %>
-    <div class="comments">
-      <%@comments.each do |comment|%>
-        <div class="comment">
-          <h4><%= comment.author.name%>:</h4>
-          <span> <%= comment.text%> </span>
-        </div>
-      <%end%>
-    </div>
-  <% end %>
+  <%= render 'shared/comments', post: @post  %>
 </section>
