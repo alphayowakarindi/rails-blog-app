@@ -84,6 +84,7 @@ a {
   border: 3px solid #000;
   margin-top: 18px;
   padding: 5px 5px 15px 5px;
+  position: relative;
 }
 
 .post p {
@@ -131,4 +132,10 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 15px;
+}
+
+.post .reaction-count {
+  position: absolute;
+  right: 7px;
+  bottom: 7px;
 }
