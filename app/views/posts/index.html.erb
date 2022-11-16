@@ -17,14 +17,16 @@
         <%= link_to post.title, user_post_path(@user, post) %>
       </p>
     </div>
-    <div class="comments">
-      <% post.comments.each do |comment| %>
-        <div class="comment">
-          <h4><%= comment.author.name %>:</h4>
-          <span class="text"> <%= comment.text %></span>
-        </div>
-      <% end %>
-    </div>
-  <%end%>
+    <% if post.comments.length.positive? %>
+      <div class="comments">
+        <% post.comments.each do |comment| %>
+          <div class="comment">
+            <h4><%= comment.author.name %>:</h4>
+            <span class="text"> <%= comment.text %></span>
+          </div>
+        <% end %>
+      </div>
+    <%end%>
+  <% end %>
   <button class="btn see-posts">Pagination</button>
 </section>
