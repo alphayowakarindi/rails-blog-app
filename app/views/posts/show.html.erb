@@ -8,12 +8,14 @@
       <%= @post_text%>
     </p>
   </div>
-  <div class="comments">
-    <%@comments.each do |comment|%>
-      <div class="comment">
-        <h4><%= comment.author.name%>:</h4>
-        <span> <%= comment.text%> </span>
-      </div>
-    <%end%>
-  </div>
+  <% if @comments.length.positive? %>
+    <div class="comments">
+      <%@comments.each do |comment|%>
+        <div class="comment">
+          <h4><%= comment.author.name%>:</h4>
+          <span> <%= comment.text%> </span>
+        </div>
+      <%end%>
+    </div>
+  <% end %>
 </section>
