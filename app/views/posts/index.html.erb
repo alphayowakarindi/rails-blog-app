@@ -17,14 +17,14 @@
         <%= link_to post.title, user_post_path(@user, post) %>
       </p>
     </div>
-    <% post.comments.each do |comment| %>
-      <div class="comments">
+    <div class="comments">
+      <% post.comments.each do |comment| %>
         <div class="comment">
           <h4><%= comment.author.name %>:</h4>
           <span> <%= comment.text %></span>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   <%end%>
   <button class="btn see-posts">Pagination</button>
 </section>
