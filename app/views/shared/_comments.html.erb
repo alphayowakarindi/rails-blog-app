@@ -1,10 +1,19 @@
  <% if post.comments.length.positive? %>
   <div class="comments">
-    <% post.comments.each do |comment| %>
-      <div class="comment">
-        <h4><%= comment.author.name %>:</h4>
-        <span class="text"> <%= comment.text %></span>
-      </div>
+    <% if defined?(limit_comments)  %>
+      <% post.recent_five.each do |comment| %>
+        <div class="comment">
+          <h4><%= comment.author.name %>:</h4>
+          <span class="text"> <%= comment.text %></span>
+        </div>
+      <% end %>
+    <% else %>
+      <% post.comments.each do |comment| %>
+        <div class="comment">
+          <h4><%= comment.author.name %>:</h4>
+          <span class="text"> <%= comment.text %></span>
+        </div>
+      <% end %>
     <% end %>
   </div>
 <%end%>
