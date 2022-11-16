@@ -1,1 +1,17 @@
-<h1>Here is a list of one user fetched by their id</h1>
+<section id="users">
+  <%= render 'shared/user_details', user: @user %>
+</section>
+<section id="bio">
+  <h4>Bio</h4>
+  <p>
+    <%= @user.bio %>
+  </p>
+</section>
+<section id="recent-posts">
+  <% @recent_posts.each_with_index do |post, index| %>
+    <%= render 'shared/post_excerpt', post: post, index: index %>
+  <% end %>
+  <button class="btn see-posts">
+    <%= link_to 'See all posts', user_posts_path(@user) %>
+  </button>
+</section>

@@ -1,1 +1,12 @@
-<h1>Here is a view of a post for a given user</h1>
+<section id="post">
+  <div class="post">
+    <header>
+      <h4>Post #1 by <%= @author%> </h4>
+      <span>Comments: <%= @comments_count%>, Likes: <%= @likes_count%></span>
+    </header>
+    <p>
+      <%= @post_text%>
+    </p>
+  </div>
+  <%= render 'shared/comments', post: @post  %>
+</section>
