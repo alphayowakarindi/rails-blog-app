@@ -9,12 +9,7 @@
 </section>
 <section id="recent-posts">
   <% @recent_posts.each_with_index do |post, index| %>
-    <div class="post">
-      <h4><%= link_to "Post ##{index+1}", user_post_path(@user, post)%></h4>
-      <p>
-        <%= link_to post.title, user_post_path(@user, post) %>
-      </p>
-    </div>
+    <%= render 'shared/post_excerpt', post: post, index: index %>
   <% end %>
   <button class="btn see-posts">
     <%= link_to 'See all posts', user_posts_path(@user) %>

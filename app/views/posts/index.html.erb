@@ -3,12 +3,7 @@
 </section>
 <section id="recent-posts">
   <%@posts.each_with_index do |post, index|%>
-    <div class="post">
-      <h4><%= link_to "Post ##{index+1}", user_post_path(@user, post)%></h4>
-      <p>
-        <%= link_to post.title, user_post_path(@user, post) %>
-      </p>
-    </div>
+    <%= render 'shared/post_excerpt', post: post, index: index %>
     <%= render 'shared/comments', post: post %>
   <% end %>
   <button class="btn see-posts">Pagination</button>
