@@ -134,6 +134,28 @@ a {
   margin-bottom: 15px;
 }
 
+#post .add-comment a,
+.like-btn input {
+  margin: 10px 0 20px 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 1px 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#post .like-btn input {
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+#post .reaction-btns {
+  display: flex;
+  align-items: center;
+}
+
 .post .reaction-count {
   position: absolute;
   right: 7px;

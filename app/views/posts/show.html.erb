@@ -8,5 +8,15 @@
       <%= @post_text%>
     </p>
   </div>
+  <div class="reaction-btns">
+    <div class="add-comment">
+    <%= link_to 'Add comment', new_user_post_comment_path(@post.author, @post) %>
+  </div>
+   <div class="like-btn">
+   <%= form_with url:  user_post_likes_path(@post.author, @post) do |form| %>
+      <div>
+        <%= form.submit 'Like' %>
+      </div>
+    <% end %></div></div>
   <%= render 'shared/comments', post: @post  %>
 </section>
