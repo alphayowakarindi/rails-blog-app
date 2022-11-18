@@ -12,4 +12,8 @@ class PostsController < ApplicationController
     @comments_count = @post.comments.length
     @likes_count = @post.likes.length
   end
+
+  def new
+    @post = Post.new
+  end
 end
