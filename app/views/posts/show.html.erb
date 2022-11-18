@@ -8,5 +8,8 @@
       <%= @post_text%>
     </p>
   </div>
+    <div class="add-comment">
+    <%= link_to 'Add comment', new_user_post_comment_path(@post.author, @post) %>
+  </div>
   <%= render 'shared/comments', post: @post  %>
 </section>
