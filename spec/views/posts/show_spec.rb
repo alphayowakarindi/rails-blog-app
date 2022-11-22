@@ -21,4 +21,7 @@ RSpec.describe 'User post', type: :feature do
   it 'renders number of comments ' do
     expect(page).to have_content(1)
   end
+  it 'renders number of likes ' do
+    expect(page).to have_content(0)
+  end
 end
