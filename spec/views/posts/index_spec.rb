@@ -22,4 +22,8 @@ RSpec.describe 'Post index page', type: :feature do
   it 'shows number of posts written by agiven user' do
     expect(page).to have_content(4)
   end
+
+  it 'shows post title of the user' do
+    expect(page).to have_content('My first post')
+  end
 end
