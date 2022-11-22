@@ -26,4 +26,10 @@ RSpec.describe 'Post index page', type: :feature do
   it 'shows post title of the user' do
     expect(page).to have_content('My first post')
   end
+
+  it 'shows first comments of the post' do
+    expect(page).to have_content('My first awesome comment straight from Kenya')
+  end
+
+  
 end
