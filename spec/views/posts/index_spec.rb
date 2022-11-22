@@ -39,5 +39,9 @@ RSpec.describe 'Post index page', type: :feature do
     expect(page).to have_content(0)
   end
 
+  it 'shows a section for pagination if there are more posts' do
+    expect(page.html).to have_content('Pagination')
+  end
+
   
 end
