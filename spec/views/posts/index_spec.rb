@@ -31,5 +31,9 @@ RSpec.describe 'Post index page', type: :feature do
     expect(page).to have_content('My first awesome comment straight from Kenya')
   end
 
+  it 'shows how many comments a post has' do
+    expect(page).to have_content(1)
+  end
+
   
 end
