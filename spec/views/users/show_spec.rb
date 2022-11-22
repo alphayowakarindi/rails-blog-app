@@ -3,6 +3,10 @@ require 'rails_helper'
 RSpec.describe 'User show', type: :feature do
   before(:example) do
     @user = User.create(name: 'Elon Musk', photo: 'link/goes/here', bio: 'this is my bio')
+    Post.create(title: 'My first post', text: 'Body text of the post', author_id: @user.id)
+    Post.create(title: 'My second post', text: 'Body text of the post', author_id: @user.id)
+    Post.create(title: 'My third post', text: 'Body text of the post', author_id: @user.id)
+    Post.create(title: 'My fourth post', text: 'Body text of the post', author_id: @user.id)
 
     visit user_path(@user)
   end
@@ -21,5 +25,11 @@ RSpec.describe 'User show', type: :feature do
 
   it 'shows bio of the user' do
     expect(page).to have_content('this is my bio')
+  end
+
+  it 'shows the first three posts of the user' do
+    expect(page).to have_content('My fourth post')
+    expect(page).to have_content('My third post')
+    expect(page).to have_content('My second post')
   end
 end
