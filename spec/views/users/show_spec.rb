@@ -4,7 +4,7 @@ RSpec.describe 'User show', type: :feature do
   before(:example) do
     @user = User.create(name: 'Elon Musk', photo: 'link/goes/here', bio: 'this is my bio')
 
-    visit users_path
+    visit user_path(@user)
   end
 
   it 'renders photo of the user' do
