@@ -32,4 +32,8 @@ RSpec.describe 'User show', type: :feature do
     expect(page).to have_content('My third post')
     expect(page).to have_content('My second post')
   end
+
+  it 'shows the see all posts button' do
+    expect(page.html).to have_content('See all posts')
+  end
 end
