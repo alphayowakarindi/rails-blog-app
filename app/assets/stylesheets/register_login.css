@@ -15,6 +15,7 @@
 #log-in input[type="checkbox"] {
   width: auto;
 }
+
 #sign-up input[type="submit"],
 #log-in input[type="submit"] {
   border-bottom: 4px solid rgba(0, 0, 0, 0.8);
