@@ -4,7 +4,7 @@
 }
 
 #sign-up input,
-#login input {
+#log-in input {
   width: 80%;
   border: 2px solid #000;
   padding: 6px;
@@ -12,10 +12,11 @@
   background-color: transparent;
 }
 
-#login input[type="checkbox"] {
+#log-in input[type="checkbox"] {
   width: auto;
 }
-#sign-up input[type="submit"] {
+#sign-up input[type="submit"],
+#log-in input[type="submit"] {
   border-bottom: 4px solid rgba(0, 0, 0, 0.8);
   border-right: 4px solid rgba(0, 0, 0, 0.8);
   padding: 0;
