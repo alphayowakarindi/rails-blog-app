@@ -11,6 +11,10 @@
   margin: 8px 0;
   background-color: transparent;
 }
+
+#login input[type="checkbox"] {
+  width: auto;
+}
 #sign-up input[type="submit"] {
   border-bottom: 4px solid rgba(0, 0, 0, 0.8);
   border-right: 4px solid rgba(0, 0, 0, 0.8);
