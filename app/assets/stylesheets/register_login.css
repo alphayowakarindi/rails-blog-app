@@ -1,0 +1,25 @@
+#sign-up,
+#log-in {
+  text-align: center;
+}
+
+#sign-up input,
+#log-in input {
+  width: 80%;
+  border: 2px solid #000;
+  padding: 6px;
+  margin: 8px 0;
+  background-color: transparent;
+}
+
+#log-in input[type="checkbox"] {
+  width: auto;
+}
+
+#sign-up input[type="submit"],
+#log-in input[type="submit"] {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+  border-right: 4px solid rgba(0, 0, 0, 0.8);
+  padding: 0;
+  cursor: pointer;
+}
