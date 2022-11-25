@@ -2,7 +2,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    return unless user.present?
+    user ||= User.new # guest user (not logged in)
 
     can :read, :all
     can :destroy, Post, author_id: user.id
