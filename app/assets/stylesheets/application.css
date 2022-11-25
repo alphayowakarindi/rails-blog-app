@@ -135,7 +135,8 @@ a {
 }
 
 #post .add-comment a,
-.like-btn input {
+.like-btn input,
+.delete-btn input {
   margin: 10px 0 20px 0;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.5);
@@ -146,7 +147,12 @@ a {
   cursor: pointer;
 }
 
-#post .like-btn input {
+#post .delete-btn input {
+  background-color: red;
+}
+
+#post .like-btn input,
+#post .delete-btn input {
   font-size: 12px;
   margin-left: 6px;
 }
