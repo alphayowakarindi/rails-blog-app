@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   before_action :set_post, only: [:create]
 
   def new
@@ -16,6 +18,13 @@ class CommentsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  # destroy
+  def destroy
+    @comment = Comment.find(params[:id])
+    @comment.destroy
+    redirect_to user_post_path(current_user, params[:post_id])
   end
 
   private

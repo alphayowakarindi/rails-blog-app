@@ -10,13 +10,23 @@
   </div>
   <div class="reaction-btns">
     <div class="add-comment">
-    <%= link_to 'Add comment', new_user_post_comment_path(@post.author, @post) %>
-  </div>
-   <div class="like-btn">
-   <%= form_with url:  user_post_likes_path(@post.author, @post) do |form| %>
-      <div>
-        <%= form.submit 'Like' %>
-      </div>
-    <% end %></div></div>
-  <%= render 'shared/comments', post: @post  %>
+      <%= link_to 'Add comment', new_user_post_comment_path(@post.author, @post) %>
+    </div>
+    <div class="like-btn">
+      <%= form_with url:  user_post_likes_path(@post.author, @post) do |form| %>
+        <div>
+          <%= form.submit 'Like' %>
+        </div>
+      <% end %></div>
+    <% if can? :destroy, @post %>
+      <div class="delete-btn">
+        <%= form_with url:  user_post_path(@post.author, @post), method: :delete do |form| %>
+          <div>
+            <%= form.submit 'Delete' %>
+          </div>
+        <% end %></div>
+    </div>
+  <% end %>
+</div>
+<%= render 'shared/comments', post: @post  %>
 </section>
