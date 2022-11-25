@@ -18,13 +18,15 @@
           <%= form.submit 'Like' %>
         </div>
       <% end %></div>
-    <div class="delete-btn">
-      <%= form_with url:  user_post_path(@post.author, @post), method: :delete do |form| %>
-        <div>
-          <%= form.submit 'Delete' %>
-        </div>
-      <% end %></div>
-  </div>
+    <% if can? :destroy, @post %>
+      <div class="delete-btn">
+        <%= form_with url:  user_post_path(@post.author, @post), method: :delete do |form| %>
+          <div>
+            <%= form.submit 'Delete' %>
+          </div>
+        <% end %></div>
+    </div>
+  <% end %>
 </div>
 <%= render 'shared/comments', post: @post  %>
 </section>
