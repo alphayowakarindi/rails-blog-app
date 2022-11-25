@@ -2,11 +2,13 @@
 <div class="comment">
   <h4><%= comment.author.name %>:</h4>
   <span class="text"> <%= comment.text %></span>
+</div>
+<% if can? :read, @post %>
   <div class="delete-btn">
-  <%= form_with url:  user_post_comment_path(@post.author, @post, comment), method: :delete do |form| %>
-    <div>
-      <%= form.submit 'Delete' %>
-    </div>
-  <% end %>
-</div>
-</div>
+    <%= form_with url:  user_post_comment_path(@post.author, @post, comment), method: :delete do |form| %>
+      <div>
+        <%= form.submit 'Delete' %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
