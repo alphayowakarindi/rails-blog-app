@@ -41,15 +41,10 @@ To get a local copy up and running follow these simple example steps.
 - Twitter:[@markotuya](https://Twitter.com/mark_anthonny)
 - LinkedIn:[@markotuya](https://www.linkedin.com/in/mark-otuya)
 
-👤 **Author 3**
-- GitHub: [@Piercel2022](https://github.com/Piercel2022)
-- Twitter: [@pier_celestin](https://twitter.com/pier_celestin)
-- LinkedIn: [@piercelestinmax](https://linkedin.com/in/piercelestinmax)
-
 ## 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://alphayowakarindi/rails-blog-app/issues).
+Feel free to check the [issues page](https://github.com/alphayowakarindi/rails-blog-app/issues). 
 
 ## Show your support
 
