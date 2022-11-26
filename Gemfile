@@ -75,4 +75,5 @@ end
 
 gem 'cancancan'
 gem 'devise'
+gem 'rswag'
 gem 'rubocop', '>= 1.0', '< 2.0'
