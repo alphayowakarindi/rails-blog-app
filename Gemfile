@@ -73,7 +73,7 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'rswag'
 gem 'cancancan'
 gem 'devise'
+gem 'rswag'
 gem 'rubocop', '>= 1.0', '< 2.0'
